@@ -1,12 +1,12 @@
 function get_data() {
   $.get("hello", function(data) {
     var out = document.getElementById("output");
-    out.placeholder = data;
+    out.value = data;
   })
 };
 
 function init() {
   var out = document.getElementById("output");
-  out.placeholder = "Starting export...";
+  out.value = "Starting export...";
   setInterval(get_data, 1000);
 };
